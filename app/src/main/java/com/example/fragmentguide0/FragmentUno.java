@@ -1,13 +1,12 @@
 package com.example.fragmentguide0;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.example.fragmentguide0.databinding.FragmentUnoBinding;
 
@@ -62,12 +61,12 @@ public class FragmentUno extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-       FragmentUnoBinding binding = FragmentUnoBinding.inflate(getLayoutInflater());
+        FragmentUnoBinding binding = FragmentUnoBinding.inflate(getLayoutInflater());
 
-       binding.abrir.setOnClickListener(v -> {
+        binding.abrir.setOnClickListener(v -> {
 
-           Navigation.findNavController(binding.getRoot()).navigate(R.id.action_fragmentUno_to_questionFragment);
-       });
+            Navigation.findNavController(binding.getRoot()).navigate(R.id.action_fragmentUno_to_questionFragment);
+        });
 
         return binding.getRoot();
     }
